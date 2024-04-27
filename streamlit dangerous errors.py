@@ -3,7 +3,7 @@ import pickle
 import streamlit as st
 
 # Load the trained model
-loaded_model = pickle.load(open('C:/Users/shine/Downloads/trained_model (1).sav', 'rb'))
+loaded_model = pickle.load(open('C:\\Users\\shine\\Downloads\\trained_model (1).sav', 'rb'))
 
 # Function to classify nutritional status
 def classify_nutritional_status(prediction):
@@ -42,8 +42,8 @@ def classify_nutritional_status(prediction):
     elif 1.8 <= prediction <= 2.7:
         return "HEALTHY HEIGHT"
 
-recommend_list = pickle.load(open("C:/Users/shine/Downloads/recommendations (1).pkl", 'rb'))
-similarity = pickle.load(open("C:/Users/shine/Downloads/similarity.pkl", 'rb'))
+recommend_list = pickle.load(open("C:\\Users\\shine\\Downloads\\recommendations (1).pkl", 'rb'))
+similarity = pickle.load(open("C:\\Users\\shine\\Downloads\\similarity.pkl", 'rb'))
 
 
 def recommend(typi):
