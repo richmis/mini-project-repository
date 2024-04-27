@@ -43,7 +43,17 @@ def classify_nutritional_status(prediction):
         return "HEALTHY HEIGHT"
 
 recommend_list = pickle.load(open("recommendations (1).pkl", 'rb'))
-similarity = pickle.load(open("https://drive.google.com/file/d/1lJy9xTHY0l48F2DQV-KBCEiD1qyhxTX5/view?usp=sharing", 'rb'))
+import gdown
+import pickle
+
+# Download the file from Google Drive
+url = 'https://drive.google.com/file/d/1lJy9xTHY0l48F2DQV-KBCEiD1qyhxTX5/view?usp=sharing'
+output = 'similarity.pkl'
+gdown.download(url, output, quiet=False)
+
+# Load the pickled object
+with open(output, 'rb') as f:
+    similarity = pickle.load(f)
 
 
 def recommend(typi):
