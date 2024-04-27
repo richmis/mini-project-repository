@@ -43,7 +43,7 @@ def classify_nutritional_status(prediction):
         return "HEALTHY HEIGHT"
 
 recommend_list = pickle.load(open("recommendations (1).pkl", 'rb'))
-similarity = pickle.load(open("similarity.pkl", 'rb'))
+similarity = pickle.load(open("similarity.zip", 'rb'))
 
 
 def recommend(typi):
